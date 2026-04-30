@@ -209,7 +209,7 @@ export function AdMobTestDialog({ open, onOpenChange }: AdMobTestDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden flex flex-col">
+      <DialogContent className="flex-1 flex flex-col max-h-screen max-w-full overscroll-auto">
         <DialogHeader>
           <DialogTitle>AdMob Testing Console</DialogTitle>
           <DialogDescription>
@@ -217,15 +217,15 @@ export function AdMobTestDialog({ open, onOpenChange }: AdMobTestDialogProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <Tabs defaultValue="config" className="flex-1 overflow-hidden flex flex-col">
-          <TabsList className="grid w-full grid-cols-4">
+        <Tabs defaultValue="config" className="flex-1 flex flex-col overflow-auto overscroll-auto">
+          <TabsList className="grid w-full grid-cols-4 object-cover">
             <TabsTrigger value="config">Configuration</TabsTrigger>
             <TabsTrigger value="settings">AdMob Settings</TabsTrigger>
             <TabsTrigger value="stats">Statistics</TabsTrigger>
             <TabsTrigger value="logs">Logs</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="config" className="flex-1 overflow-auto space-y-4 mt-4">
+          <TabsContent value="config" className="flex-1 overflow-auto space-y-4 mt-4 overscroll-auto">
             <Card>
               <CardHeader>
                 <CardTitle>Ad Configuration</CardTitle>
