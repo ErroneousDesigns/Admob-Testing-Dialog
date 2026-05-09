@@ -139,12 +139,12 @@ export function AdMobTestDialog({ open, onOpenChange }: AdMobTestDialogProps) {
 
   const handleAdComplete = (success: boolean) => {
     if (success) {
-      addLog('success', `${adType} ad displayed successfully`);
+      addLog('success', `${adType} ad displayed successfully - Revenue: $${stats.revenue}`);
       setStats(prev => ({
         ...prev,
         impressions: prev.impressions + 1,
         clicks: prev.clicks + (Math.random() > 0.9 ? 1 : 0),
-        revenue: prev.revenue + (Math.random() * 0.5),
+        revenue: prev.revenue + (Math.random() * 0.7),
       }));
     } else {
       addLog('info', `${adType} ad dismissed by user`);
